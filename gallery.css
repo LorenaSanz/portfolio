@@ -1,39 +1,43 @@
+
 /* Galería de imágenes */
 .galeria {
+    position: relative;
     display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
-    justify-content: center; /* Centra las imágenes en el contenedor */
-    gap: 10px; /* Espacio entre las imágenes */
+    flex-wrap: wrap; /* Permitir que las imágenes se distribuyan en varias filas */
+    justify-content: center; /* Centrar las imágenes */
+    width: 100%;
+    gap: 10px; /* Espaciado entre imágenes */
 }
-
 
 .galeria img {
     width: 100%;
     max-width: 300px; /* Tamaño máximo de las imágenes */
     height: auto;
     object-fit: cover;
+    opacity: 0.8;
     transition: transform 0.3s ease;
 }
 
 .galeria img:hover {
     transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+    opacity: 1;
+    filter: contrast(120%);
 }
 
-
-/* Superposición inicial (velo difuminado) */
+/* Superposición inicial (overlay difuminado) */
 .galeria-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Capa blanca semitransparente */
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* Asegura que el overlay esté por encima de las imágenes */
-    backdrop-filter: blur(10px); /* Efecto de difuminado */
-    transition: opacity 0.5s ease; /* Transición suave para ocultar el overlay */
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    transition: opacity 0.5s ease;
 }
 
 /* Texto de la superposición */
@@ -48,19 +52,24 @@
 
 /* Desaparición del velo al pasar el cursor sobre la galería */
 .galeria:hover .galeria-overlay {
-    opacity: 0; /* El velo se desvanece */
-    pointer-events: none; /* Permite interactuar con las imágenes debajo */
+    opacity: 0;
+    pointer-events: none;
 }
 
-/* Estilos para pantallas pequeñas */
+/* Ajustes específicos para móviles */
 @media (max-width: 600px) {
     .galeria {
-        gap: 5px; /* Reduce el espacio entre imágenes en pantallas pequeñas */
+        flex-direction: column; /* Asegurar que las imágenes se apilen verticalmente */
+        align-items: center;
     }
 
     .galeria img {
-        max-width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+        width: 90%; /* Que no ocupen todo el ancho, pero sí se adapten bien */
+        max-width: none; /* Eliminar límite de 300px en móviles */
+        margin-bottom: 10px;
+    }
+
+    .galeria-overlay h1 {
+        font-size: 2.5rem; /* Reducir el tamaño del texto en pantallas pequeñas */
     }
 }
-
-
