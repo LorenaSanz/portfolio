@@ -53,4 +53,16 @@
     pointer-events: none; /* Permite interactuar con las imágenes debajo */
 }
 
-/* Estilos para la descripción de perfil */
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .galeria {
+        flex-wrap: wrap; /* Las imágenes se reorganizan en filas */
+        height: auto; /* Ajusta automáticamente la altura de la galería */
+    }
+
+    .galeria img {
+        width: 100%; /* Cada imagen ocupa todo el ancho disponible */
+        flex-grow: unset; /* Se elimina el crecimiento flexible */
+        margin-bottom: 10px; /* Espaciado entre las imágenes */
+    }
+}
