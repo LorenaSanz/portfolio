@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorena - Desarrollo e ilustración</title>
+    <!-- Enlaces a los nuevos archivos CSS -->
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="modals.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-circle">
+                <img src="IMAGENES/logo.png" alt="Logo de Lorena Sanz" class="logo-img">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About.</a></li>
+                <li><a href="https://github.com/LorenaSanz">Proyectos.</a></li> <!-- Actualizado -->
+                <li><a href="#contact">Contact.</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="fade-in">
+        <section class="left">
+            <h1>
+                <span class="hover-text" id="software">Software</span>.<br>
+                <span class="hover-text" id="web">Web</span>.<br>
+                <span class="hover-text" id="diseno">Diseño</span>.<br>
+                <span class="hover-text" id="ilustracion">Ilustración</span>.<br>
+            </h1>
+
+            <p class="descripcion">Estudiante de Desarrollo de Aplicaciones Multiplataforma.</p>
+            <div class="social-buttons">
+                <div class="gmail-container">
+                    <a href="javascript:void(0);" class="social-button" id="gmailButton">
+                        <img src="IMAGENES/gmail.png" alt="Gmail" class="social-icon">
+                    </a>
+
+                    <div class="dropdown" id="gmailDropdown">
+                        <p id="emailText">lorenasanzherrero@gmail.com</p>
+                        <button class="copy-button" id="copyEmailButton">Copiar</button>
+                    </div>
+
+                    <div id="copyMessage" class="copy-message" style="display: none;">¡Correo copiado!</div>
+                </div>
+
+                <a href="https://es.linkedin.com/in/lorena-sanz-herrero-305380312" class="social-button">
+                    <img src="IMAGENES/linkedln.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <div class="curriculum-container">
+                    <a href="javascript:void(0);" class="social-button" id="curriculumButton">
+                        <img src="IMAGENES/cv.png" alt="Curriculum" class="social-icon">
+                    </a>
+
+                    <div class="dropdown" id="curriculumDropdown">
+                        <p>Ver currículum</p>
+                    </div>
+                </div>
+
+                <a href="https://github.com/LorenaSanz" class="social-button">
+                    <img src="IMAGENES/github.png" alt="GitHub" class="social-icon">
+                </a>
+            </div>
+        </section>
+
+        <section class="right">
+            <img src="IMAGENES/Designer.png" alt="Imagen de escritorio de trabajo">
+        </section>
+    </main>
+
+
+    <!-- Galería de Imágenes con el overlay de DIGITAL ART -->
+    <section class="info-cards">
+        <div class="card profile-card">
+            <img src="IMAGENES/fotoLorena.jpg" alt="Foto de perfil" class="profile-img">
+            <div class="profile-description">
+                <h2>Conóceme</h2>
+                <p>¡Hola! Soy Lorena, y si has llegado hasta aquí esperando algo realmente espectacular, siento
+                    decepcionarte.
+                    Soy estudiante de 2º año de Desarrollo de Aplicaciones Multiplataforma, y este es el espacio donde
+                    compartiré
+                    algunos de mis proyectos. No prometo cambiar el mundo, pero quién sabe, quizá encuentres algo que te
+                    haga decir
+                    "no está mal".
+                    <br>Me encanta el diseño, el arte y la decoración, pero también tengo una parte que no piensa en
+                    otra cosa más
+                    que en vivir en mi pueblo, rodeada de naturaleza, donde la conexión más importante es con los
+                    árboles y no con
+                    el Wi-Fi.
+                </p>
+            </div>
+        </div>
+
+        <div class="galeria">
+            <!-- Overlay con el texto DIGITAL ART -->
+            <div class="galeria-overlay">
+                <h1>Digital ART.</h1>
+            </div>
+
+            <img src="IMAGENES/dior.jpg" alt="Imagen Dior">
+            <img src="IMAGENES/medals.jpeg">
+            <img src="IMAGENES/parra.jpeg">
+            <img src="IMAGENES/prada.jpg">
+            <img src="IMAGENES/dog.jpeg">
+            <img src="IMAGENES/kaws.jpg">
+
+        </div>
+
+        <!-- Contenedor para la previsualización de la imagen -->
+        <div class="image-preview-overlay" id="imagePreviewOverlay">
+            <div class="image-preview" id="imagePreview">
+                <img id="previewImage" src="" alt="Vista previa de la imagen">
+                <button id="closeImageButton">Cerrar</button>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="skills-overlay">
+                <h1>Skills.</h1>
+            </div>
+            <ul class="skills-list">
+                <img src="IMAGENES/java_original_logo_icon_146458.png" alt="Java">
+                <img src="IMAGENES/file_type_html_icon_130541.png" alt="HTML5">
+                <img src="IMAGENES/file_type_css_icon_130661.png" alt="CSS3">
+                <img src="IMAGENES/figma_logo_icon_170157.png" alt="Figma">
+                <img src="IMAGENES/android_studio_alt_macos_bigsur_icon_190394.png" alt="Android Studio">
+                <img src="IMAGENES/eclipse_94656.png" alt="Eclipse">
+                <img src="IMAGENES/file_type_vscode_icon_130084.png" alt="VScode">
+                <img src="IMAGENES/adobe_photoshop_macos_bigsur_icon_190436.png" alt="Photoshop">
+            </ul>
+        </div>
+        
+        <div class="card github-card">
+            <div class="github-overlay">
+                <img src="IMAGENES/github_logo_no_bg_final.png" alt="GitHub Logo" class="github-logo">
+            </div>
+        
+            <!-- Contenedor para el widget de GitHub -->
+            <div class="github-widget">
+                <!-- Incrustar tus repositorios de GitHub -->
+                <a href="https://github.com/LorenaSanz/GestorTareas_TaskMaster" target="_blank">
+                    <img src="https://github-readme-stats.vercel.app/api/pin/?username=LorenaSanz&repo=GestorTareas_TaskMaster&theme=radical"
+                        alt="Destacar repositorio de GitHub">
+                    <!-- Lenguajes más utilizados -->
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LorenaSanz&layout=compact&theme=radical"
+                        alt="Lenguajes más utilizados">
+                </a>
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <h2>En construcción</h2>
+            <p></p>
+        </div>
+    </section>
+
+    <!-- Contenedor para el overlay del currículum -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Contenedor para la previsualización del currículum -->
+    <div class="curriculum-preview" id="curriculumPreview">
+        <img id="curriculumImage" src="IMAGENES/cv25.png" alt="Currículum de Lorena" />
+    </div>
+
+    <!-- Incluir el archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+
+</html>

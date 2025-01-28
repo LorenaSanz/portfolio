@@ -1,0 +1,106 @@
+@media (max-width: 900px) {
+    .card, .card2 {
+        width: calc(50% - 20px); /* En pantallas medianas, cada card ocupa la mitad del ancho */
+    }
+}
+
+@media (max-width: 600px) {
+    .card, .card2 {
+        width: 100%; /* En pantallas pequeñas, cada card ocupa todo el ancho */
+    }
+}
+
+
+@media (max-width: 600px) {
+    .galeria img {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+    }
+}
+/*Github]*/
+
+.github-card {
+    background-color: #F5F5F5; /* Color de fondo neutro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center;
+}
+
+.github-card h2 {
+    color: #4A4A4A; /* Color de encabezado en gris oscuro */
+}
+
+.github-card p {
+    color: #6C757D; /* Color del texto */
+}
+
+.github-widget img {
+    width: 100%; /* Hace que las imágenes ocupen el 100% del ancho del contenedor */
+    max-width: 400px; /* Limita el tamaño máximo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto; /* Centra las imágenes */
+}
+
+.github-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Asegura que las imágenes estén centradas */
+    justify-content: center;
+    gap: 20px; /* Añade espacio entre los widgets */
+    padding: 10px;
+}
+
+
+.github-widget img:hover {
+    transform: scale(1.05); /* Efecto de zoom al hacer hover */
+    
+}
+
+/* Overlay para skills y GitHub */
+.skills-overlay,
+.github-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    backdrop-filter: blur(10px); /* Efecto difuminado */
+    transition: opacity 0.5s ease;
+}
+
+/* Texto dentro del overlay */
+.skills-overlay h1,
+.github-overlay h1 {
+    font-size: 4rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Desaparece el overlay al hacer hover */
+.skills:hover .skills-overlay,
+.github-card:hover .github-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Aseguramos que el overlay se sitúe correctamente */
+.skills,
+.github-card {
+    position: relative;
+    overflow: hidden;
+}
+/* Estilo para el logo de GitHub en el overlay */
+.github-logo {
+    width: 200px;  /* Reducido a 70px */
+    height: auto;  /* Mantiene la proporción */
+}

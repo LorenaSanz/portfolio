@@ -1,0 +1,13 @@
+/* General settings */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9FA; /* Fondo en color pastel claro */
+    color: #333;
+    overflow-x: hidden;
+}
+
+.descripcion {
+    font-family: monospace;
+}

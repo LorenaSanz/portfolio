@@ -1,0 +1,56 @@
+/* Galería de imágenes */
+.galeria {
+    position: relative; /* Necesario para colocar el velo encima */
+    display: flex;
+    width: 100%;
+    height: 430px;
+}
+
+.galeria img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.galeria img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* Superposición inicial (velo difuminado) */
+.galeria-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Capa blanca semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Asegura que el overlay esté por encima de las imágenes */
+    backdrop-filter: blur(10px); /* Efecto de difuminado */
+    transition: opacity 0.5s ease; /* Transición suave para ocultar el overlay */
+}
+
+/* Texto de la superposición */
+.galeria-overlay h1 {
+    font-size: 4rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Desaparición del velo al pasar el cursor sobre la galería */
+.galeria:hover .galeria-overlay {
+    opacity: 0; /* El velo se desvanece */
+    pointer-events: none; /* Permite interactuar con las imágenes debajo */
+}
+
+/* Estilos para la descripción de perfil */

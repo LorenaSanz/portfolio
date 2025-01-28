@@ -1,0 +1,36 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #F8F9FA; /* Fondo blanco */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 0; /* Asegúrate de que no haya margen debajo */
+    background-color: rgba(255, 255, 255, 1); /* Color sólido cuando no se hace scroll */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente cuando se hace scroll */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Añade una pequeña sombra para darle más énfasis */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3A3A3A; /* Texto en gris oscuro */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFB5A7; /* Hover color pastel */
+}

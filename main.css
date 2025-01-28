@@ -1,0 +1,102 @@
+/* Main section */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px; /* Reducido el padding superior para menos espacio */
+    gap: 20px;
+    margin-top: 0; /* Evitar espacio adicional */
+}
+
+.left {
+    flex: 1;
+}
+
+.left h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-top: 0; /* Evitar espacio superior en el título */
+    margin-bottom: 20px; /* Añadir espacio debajo del título si es necesario */
+    color: #4A4A4A; /* Texto principal en gris oscuro */
+}
+
+.left h1 span {
+    color: #383838; /* Color pastel rosa */
+}
+
+.left p {
+    font-size: 1.2rem;
+    margin-top: 10px; /* Reducir espacio superior en la descripción */
+    color: #6C757D; /* Texto secundario en gris claro */
+}
+/* Imagen derecha */
+.right {
+    flex: 1; /* Hace que ocupe el espacio restante */
+    display: flex; /* Asegura que se puedan aplicar alineaciones */
+    justify-content: flex-end; /* Empuja la imagen hacia la derecha */
+}
+
+.right img {
+    margin-left: auto; /* Empuja la imagen hacia la derecha automáticamente */
+    max-width: 1200px;
+    height: auto;
+}
+
+
+
+/* Call to Action buttons */
+.cta {
+    margin-top: 30px;
+}
+
+.cta button {
+    padding: 15px 30px;
+    margin-right: 20px;
+    background-color: #BDE0FE; /* Azul pastel */
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta button:hover {
+    background-color: #FFC6FF; /* Hover en rosado pastel */
+}
+
+.cta button:active {
+    transform: scale(0.95); /* Efecto de clic */
+}
+
+/* Social Icons */
+.social-buttons {
+    display: flex; /* Para alinear los botones horizontalmente */
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 30px; /* Espacio arriba de los botones */
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Color del texto */
+    padding: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el hover */
+}
+
+.social-button:hover {
+    background-color: transparent; /* Evita que aparezca un fondo rosa */
+    transform: scale(1.2); /* Aumenta el tamaño del botón al hacer hover */
+}
+
+.social-icon {
+    width: 1cm; /* Tamaño inicial del icono */
+    height: auto;
+    transition: transform 0.3s ease; /* Transición en los iconos */
+}
+
+.social-button:hover .social-icon {
+    transform: scale(1.3); /* Aumenta el tamaño del icono */
+}
