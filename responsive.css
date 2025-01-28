@@ -12,8 +12,16 @@
 
 
 @media (max-width: 600px) {
+    .galeria {
+        display: flex;
+        flex-wrap: wrap; /* Permite que las imágenes se organicen en varias filas */
+        justify-content: center; /* Centrar imágenes */
+        gap: 10px; /* Espacio entre imágenes */
+    }
+
     .galeria img {
-        width: 100%;
+        width: 90%; /* Ocupar el 90% del ancho para evitar que sean demasiado grandes */
+        max-width: 300px; /* Tamaño máximo */
         height: auto;
         opacity: 1;
     }
