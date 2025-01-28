@@ -1,15 +1,3 @@
-@media (max-width: 900px) {
-    .card, .card2 {
-        width: calc(50% - 20px); /* En pantallas medianas, cada card ocupa la mitad del ancho */
-    }
-}
-
-@media (max-width: 600px) {
-    .card, .card2 {
-        width: 100%; /* En pantallas pequeñas, cada card ocupa todo el ancho */
-    }
-}
-
 
 @media (max-width: 600px) {
     .galeria {
@@ -17,6 +5,7 @@
         flex-wrap: wrap; /* Permite que las imágenes se organicen en varias filas */
         justify-content: center; /* Centrar imágenes */
         gap: 10px; /* Espacio entre imágenes */
+        position: relative; /* Asegura que el overlay no cubra toda la pantalla */
     }
 
     .galeria img {
@@ -25,8 +14,27 @@
         height: auto;
         opacity: 1;
     }
+
+    /* Corregir el overlay en móviles */
+    .galeria .galeria-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6); /* Suavizar el fondo */
+        backdrop-filter: blur(5px); /* Suavizar desenfoque */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2; /* Asegurar que esté sobre las imágenes */
+    }
+
+    .galeria .galeria-overlay h1 {
+        font-size: 2.5rem; /* Ajuste para móviles */
+    }
 }
-/*Github]*/
+
 
 .github-card {
     background-color: #F5F5F5; /* Color de fondo neutro */
