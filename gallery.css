@@ -1,31 +1,29 @@
 
-/* Galería de imágenes */
+/* Estilos originales para escritorio */
 .galeria {
     position: relative;
     display: flex;
-    flex-wrap: wrap; /* Permitir que las imágenes se distribuyan en varias filas */
-    justify-content: center; /* Centrar las imágenes */
     width: 100%;
-    gap: 10px; /* Espaciado entre imágenes */
+    height: 430px;
 }
 
 .galeria img {
-    width: 100%;
-    max-width: 300px; /* Tamaño máximo de las imágenes */
-    height: auto;
+    width: 0px;
+    flex-grow: 1;
     object-fit: cover;
-    opacity: 0.8;
-    transition: transform 0.3s ease;
+    opacity: .8;
+    transition: .5s ease;
 }
 
 .galeria img:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+    cursor: crosshair;
+    width: 300px;
     opacity: 1;
     filter: contrast(120%);
 }
 
-/* Superposición inicial (overlay difuminado) */
-.galeria-overlay {
+/* Superposición solo en la galería */
+.galeria .galeria-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -40,8 +38,8 @@
     transition: opacity 0.5s ease;
 }
 
-/* Texto de la superposición */
-.galeria-overlay h1 {
+/* Texto dentro del overlay */
+.galeria .galeria-overlay h1 {
     font-size: 4rem;
     color: #333;
     font-family: 'Poppins', sans-serif;
@@ -50,26 +48,37 @@
     transition: opacity 0.5s ease;
 }
 
-/* Desaparición del velo al pasar el cursor sobre la galería */
+/* Ocultar overlay al pasar el cursor sobre la galería */
 .galeria:hover .galeria-overlay {
     opacity: 0;
     pointer-events: none;
 }
 
-/* Ajustes específicos para móviles */
+/* Ajustes solo para móviles */
 @media (max-width: 600px) {
     .galeria {
-        flex-direction: column; /* Asegurar que las imágenes se apilen verticalmente */
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        height: auto;
     }
 
     .galeria img {
-        width: 90%; /* Que no ocupen todo el ancho, pero sí se adapten bien */
-        max-width: none; /* Eliminar límite de 300px en móviles */
+        width: 90%;
+        max-width: 300px;
+        flex-grow: unset;
         margin-bottom: 10px;
     }
 
-    .galeria-overlay h1 {
-        font-size: 2.5rem; /* Reducir el tamaño del texto en pantallas pequeñas */
+    .galeria .galeria-overlay {
+        position: relative; /* Evita que cubra toda la pantalla en móviles */
+        height: auto;
+        background: none; /* Quita el fondo blanco en móviles */
+        backdrop-filter: none; /* Sin desenfoque en móviles */
+    }
+
+    .galeria .galeria-overlay h1 {
+        font-size: 2.5rem; /* Reducido para móviles */
     }
 }
