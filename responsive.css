@@ -3,37 +3,6 @@
 
 /* Estilos para dispositivos con un ancho máximo de 600px */
 @media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-    .logo img {
-        width: 80%;
-    }
-    .social-buttons a {
-        display: inline-block;
-        margin: 5px;
-    }
-    /* Ajusta otros elementos según sea necesario */
-}
-
-/* Estilos para dispositivos con un ancho máximo de 900px */
-@media (max-width: 900px) {
-    .main {
-        flex-direction: column;
-    }
-    .left, .right {
-        width: 100%;
-    }
-    .skills-list img {
-        width: 50px;
-        height: 50px;
-    }
-    /* Ajusta otros elementos según sea necesario */
-}
     .galeria {
         display: flex;
         flex-wrap: wrap; /* Permite que las imágenes se organicen en varias filas */
